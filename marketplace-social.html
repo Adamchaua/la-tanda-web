@@ -4237,20 +4237,20 @@
             </div>
         </div>
         <div class="mp-header-right">
-            <button class="mc-cart-btn" data-action="open-cart" title="Carrito">
+<button class="mc-cart-btn" data-action="open-cart" title="Carrito" aria-label="Abrir carrito">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="mc-cart-badge" id="mcCartBadge" style="display:none;">0</span>
             </button>
-            <button class="mp-search-btn" onclick="toggleMarketplaceSearch()">🔍</button>
-        </div>
+            <button class="mp-search-btn" onclick="toggleMarketplaceSearch()" aria-label="Buscar">🔍</button>
+            <div class="mp-search-overlay" id="mpSearchOverlay">
     </header>
     <!-- SEARCH BAR (hidden by default) -->
     <div class="mp-search-bar" id="mpSearchBar">
         <div class="mp-search-container">
             <input type="text" id="mpSearchInput" placeholder="Buscar productos, servicios..." onkeyup="if(event.key==='Enter') window.ms.searchProducts()">
-            <button onclick="window.ms.searchProducts()">Buscar</button>
-            <button class="mp-search-close" onclick="toggleMarketplaceSearch()">✕</button>
-        </div>
+                    <button onclick="window.ms.searchProducts()">Buscar</button>
+                    <button class="mp-search-close" onclick="toggleMarketplaceSearch()" aria-label="Cerrar búsqueda">✕</button>
+                </div>
         <div class="mp-quick-filters">
             <select id="categoryFilter" onchange="window.ms.searchProducts()">
                 <option value="">Categoría</option>
@@ -4332,7 +4332,7 @@
                     </div>
                 </div>
             </div>
-            <button class="exp-sell-fab" data-action="exp-sell-product" title="Vender Producto">+</button>
+            <button class="exp-sell-fab" data-action="exp-sell-product" title="Vender Producto" aria-label="Vender Producto">+</button>
         </div>
 
         <!-- My Store Section -->
